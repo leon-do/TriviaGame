@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.setDiv{
+			border:5px solid pink;
+			height: 50px;
+		}
+		.questionDiv{
+			border:5px solid red;
+			height: 50px;
+		}
+		.choice1Div{
+			border:5px solid green;
+			height: 50px;
+		}
+		.choice2Div{
+			border:5px solid blue;
+			height: 50px;
+		}
+		.timerDiv{
+			border:5px solid grey;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="setDiv"> </div>
+	<div class="questionDiv"> </div>
+	<div class="choice1Div"> </div>
+	<div class="choice2Div"> </div>
+	<div class="timerDiv"> </div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script>
+// ========================== make set ======================
+	var set = 1;
+
+// ========================== make QA ======================
+
+	var questionA = "cats or dogs?"
+	var choice1A = "dogs"
+	var choice2A = "cats"
+
+	var questionB = "up or down?"
+	var choice1B = "up"
+	var choice2B = "down"
+
+// ========================== put stuff in Div ======================
+
+	$(".setDiv").html("set: " + set)
+
+	if (set == 1){
+		$(".questionDiv").html(questionA);
+		$(".choice1Div").html(choice1A);
+		$(".choice2Div").html(choice2A);		
+	}
+
+	if (set == 2){
+		$(".questionDiv").html(questionB);
+		$(".choice1Div").html(choice1B);
+		$(".choice2Div").html(choice2B);		
+	}
+
+
+
+// ========================== on click ======================
+
+	if (set == 1){
+		$(".choice1Div").click(function(){
+			alert("correct")
+			set = set + 1;
+		})
+
+		$(".choice2Div").click(function(){
+			alert("incorrect")
+		})	
+	}
+
+	if (set == 2){
+		$(".choice1Div").click(function(){
+			alert("yayayay")
+		})
+
+		$(".choice2Div").click(function(){
+			alert("noooooo")
+		})	
+	}
+
+// ========================== make the timer ======================
+
+	var counter = 60;
+
+	//The setInterval() function calls a function every 1000 milliseconds.
+	setInterval(function(){ 
+		$(".timerDiv").html(counter)
+		counter--
+	},1000)
+
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+.setDiv{
+	border:5px solid pink;
+	height: 50px;
+}
+.questionDiv{
+	border:5px solid grey;
+	height: 50px;
+}
+.choice1Div{
+	border:5px solid green;
+	height: 50px;
+}
+.choice2Div{
+	border:5px solid blue;
+	height: 50px;
+}
+.timerDiv{
+	border:5px solid purple;
+	height: 50px;
+}
+.popup{
+	display:none;
+	height: 300px;
+	width: 500px;
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	background-color: red;
+}
